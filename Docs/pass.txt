@@ -1,0 +1,16 @@
+
+DB:
+---
+admn
+1host2ABLE3
+
+
+Useful:
+-------
+https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/intro?view=aspnetcore-2.2
+https://www.youtube.com/watch?v=EraHoPwZ7MQ
+
+Scaffold-DbContext "Server=(localdb)\mssqllocaldb;Database=Hostable;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+Data Source=EPHUBUDW2573;Initial Catalog=Hostable;Integrated Security=True
+
+optionsBuilder.UseSqlServer(@"Server=tcp:hostable.database.windows.net,1433;Initial Catalog=Hostable;Persist Security Info=False;User ID=admn;Password=1host2ABLE3;MultipleActiveResultSets=True;Encrypt=False;TrustServerCertificate=True;Connection Timeout=30;");
