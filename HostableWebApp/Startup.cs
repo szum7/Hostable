@@ -1,6 +1,5 @@
 using HostableBL.Interfaces;
 using HostableBL.Repositories;
-using HostableDAL;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,10 +24,8 @@ namespace HostableWebApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddMvc().AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
             services.AddTransient<IConnectionTest, ConnectionTestRepository>();
-            //services.AddDbContext<DBContext>(options => options.UseSqlServer(@"Server=.\\;Database=Hostable;Trusted_Connection=True;"));
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
